@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>T^3</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1000 user-scalable=0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Varela&display=swap" rel="stylesheet">
+
+
+	<style>
+		body {
+			margin: auto;
+			background-color: white;
+			font-family: 'Varela', sans-serif;
+		}
+
+		#title {
+			text-align: center;
+			/*margin: top right bottom left*/
+			margin: 20px 0 20px 0;
+			font-size: 65px;
+
+		}
+
+		table {
+			margin-left: auto;
+			margin-right: auto;
+			border-collapse: collapse;
+			border-style: hidden;
+		}
+
+		table td {
+			border: 5px solid black;
+		}
+
+		.Square {
+			height: 180px;
+			width: 180px;
+			font-size: 60pt;
+		}
+
+		.wrapper {
+			text-align: center;
+
+		}
+
+		#bottomTextbox {
+			width: 556px;
+			margin: 0 auto;
+		}
+
+		.alignleft {
+			font-size: 25px;
+			float: left;
+		}
+
+		.alignright {
+			float: right;
+			font-size: 25px;
+			color: black;
+			text-decoration: none;
+		}
+
+		#disc {
+			font-size: 20px;
+			width: 65%;
+			display: inline-block;
+		}
+		#footer{
+			font-size: 20px;
+			
+		}
+	</style>
+
+</head>
+
+<body onload="startGame()">
+	<h1 id="title">Experimental TicTacToe</h1>
+	<div class="wrapper">
+		<div id="tttboard">
+			<table>
+				<tr>
+					<td class="Square" id="s1" onClick="nextMove(this)"></td>
+					<td class="Square" id="s2" onClick="nextMove(this)"></td>
+					<td class="Square" id="s3" onClick="nextMove(this)"></td>
+				</tr>
+				<tr>
+					<td class="Square" id="s4" onClick="nextMove(this)"></td>
+					<td class="Square" id="s5" onClick="nextMove(this)"></td>
+					<td class="Square" id="s6" onClick="nextMove(this)"></td>
+				</tr>
+				<tr>
+					<td class="Square" id="s7" onClick="nextMove(this)"></td>
+					<td class="Square" id="s8" onClick="nextMove(this)"></td>
+					<td class="Square" id="s9" onClick="nextMove(this)"></td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="bottomTextbox" style="clear: both;">
+			<div class="alignleft" id="message"></div>
+			<a class="alignright" href="javascript: startGame();" id="restart">restart game</a>
+		</div>
+
+		<div id="disc">
+			<p><b>Discription:</b> This game plays exactly like the original TicTacToe, the only catch is that each
+				player limited to only three X's or O's. After the third X or O, the first one disapears, then the second,
+				and so on, until someone wins the game. This game cannot result in a draw, and has an average play
+				time of 5 minutes, although games can be as short as 3 moves or as long as 50.
+			</p>
+		</div>
+
+		<footer>
+			<pre><p id="footer">Created by: Jack Williams Contact information: jackwilliams2480@gmail.com | <a target="_blank"href="https://github.com/jackwilliams2480">GitHub</a></p></pre>
+		</footer>
+
+	</div>
+
+
+	<script src="style.js"></script>
+</body>
+
+</html>
